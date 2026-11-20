@@ -127,17 +127,33 @@
     <span class="close">&times;</span>
     <img id="enlargedImage" src="" alt="Enlarged photograph">
 </div>
-
+<!-- Lightbox -->
+<div id="lightbox" onclick="closeImage()">
+    <span class="close">&times;</span>
+    <img id="enlargedImage"
+         src=""
+         alt="Enlarged photograph"
+         onclick="event.stopPropagation()">
+</div>
 <script>
     function openImage(image) {
-        document.getElementById("lightbox").style.display = "flex";
-        document.getElementById("enlargedImage").src = image.src;
+        const lightbox = document.getElementById("lightbox");
+        const enlargedImage = document.getElementById("enlargedImage");
+
+        enlargedImage.src = image.src;
+        lightbox.style.display = "flex";
     }
 
     function closeImage() {
         document.getElementById("lightbox").style.display = "none";
     }
-</script>   
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            closeImage();
+        }
+    });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    line-height: 2;
+    background-color: #fafafa;
+    color: #1F2937;
+    padding: 32px 16px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1em;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #6B7280;
+    margin-bottom: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.button-section {
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.button-section p {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+button {
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.button-01 {
+    background-color: #0066CC;
+    color: #ffffff;
+    padding: 16px 32px;
+    border: 2px solid #0066CC;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-01:hover {
+    background-color: #ffffff;
+    color: #0066CC;
+    border-color: #0066CC;
+}
+
+.button-02 {
+    background-color: #0e6027;
+    color: #ffffff;
+    padding: 16px 32px;
+    border: 2px solid #0e6027;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.button-02:hover {
+    transform: translateY(-8px);
+    background-color: #24476b;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+/* Shared Button Styling */
+.slide-button,
+.grow-button,
+.border-button,
+.ripple-button {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.4s ease;
+}
+
+
+
+.slide-button {
+    background-color: #24476b;
+    color: white;
+    border: none;
+}
+
+.slide-button:hover {
+    transform: translateX(15px);
+    background-color: #5683ad;
+    letter-spacing: 3px;
+}
+
+
+
+.grow-button {
+    background-color: #315b82;
+    color: white;
+    border: none;
+}
+
+.grow-button:hover {
+    transform: scale(1.2);
+    background-color: #7899b8;
+    color: #20384f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.border-button {
+    background-color: transparent;
+    color: #24476b;
+    border: 2px solid #24476b;
+}
+
+.border-button:hover {
+    background-color: #24476b;
+    color: white;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 12px rgba(36, 71, 107, 0.5);
+}
+
+
+
+.ripple-button {
+    background-color: #315b82;
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.ripple-button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+    z-index: -1;
+}
+
+.ripple-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.ripple-button:hover {
+    background-color: #20384f;
+}
+
+
+
+.slide-button:focus-visible,
+.grow-button:focus-visible,
+.border-button:focus-visible,
+.ripple-button:focus-visible {
+    outline: 3px solid #7899b8;
+    outline-offset: 4px;
+}
+
+
+
+@media (max-width: 600px) {
+    .button-section {
+        padding: 25px 15px;
+    }
+
+    .slide-button,
+    .grow-button,
+    .border-button,
+    .ripple-button {
+        font-size: 14px;
+        padding: 12px 22px;
+    }
+}

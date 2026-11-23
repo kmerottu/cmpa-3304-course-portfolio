@@ -237,15 +237,7 @@ footer {
     }
 }
 
-/* Clickable Photographs */
-.photo-card img {
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.photo-card img:hover {
-    opacity: 0.85;
-}
 
 
 /* Lightbox Background */
@@ -343,9 +335,9 @@ footer {
     color: var(--primary-color);
     font-weight: bold;
 
+    transition: all 0.3s ease;
     
 }
-
 
 
 .skills .skill-item:hover {

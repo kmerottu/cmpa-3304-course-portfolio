@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Portfolio</title>
+    <title>Kyle Meroney | Photography Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    
+    <!-- Header and Navigation -->
     <header>
         <div class="logo">Kyle Meroney</div>
 
@@ -18,142 +19,176 @@
             <a href="#home">Home</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>CAPTURING MOMENTS.</h1>
-            <p>Photography is the art of seeing the world differently.</p>
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>CAPTURING MOMENTS.</h1>
+                <p>Photography is the art of seeing the world differently.</p>
+            </div>
+        </section>
+
+        <!-- Projects / Photography Gallery -->
+        <section class="portfolio" id="portfolio">
+
+            <h2>Projects</h2>
+            <h3>MY PHOTOGRAPHY</h3>
+
+            <p class="section-description">
+                A collection of moments, places, and people captured through my lens.
+            </p>
+
+            <div class="gallery">
+
+                <div class="photo-card">
+                    <img src="images/photo-4.jpg"
+                         alt="Park landscape"
+                         onclick="openImage(this)">
+                    <h3>LANDSCAPE</h3>
+                    <p>Exploring the beauty of nature.</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo-2.jpg"
+                         alt="Marching band performance"
+                         onclick="openImage(this)">
+                    <h3>Performing Arts Photography</h3>
+                    <p>Capturing personality and emotion.</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo-5.jpg"
+                         alt="Airplane landing"
+                         onclick="openImage(this)">
+                    <h3>Aviation</h3>
+                    <p>Capturing touchdown.</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo-3.jpg"
+                         alt="Night sky photography"
+                         onclick="openImage(this)">
+                    <h3>Astrophotography</h3>
+                    <p>Capturing the night sky.</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo-9.jpg"
+                         alt="Leaf in nature"
+                         onclick="openImage(this)">
+                    <h3>Nature</h3>
+                    <p>The beauty around us.</p>
+                </div>
+
+                <div class="photo-card">
+                    <img src="images/photo-7.jpg"
+                         alt="Soccer game"
+                         onclick="openImage(this)">
+                    <h3>Sports Photography</h3>
+                    <p>Capturing action and excitement.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills and Interests -->
+        <section class="skills" id="skills">
+
+            <h2>SKILLS AND INTERESTS</h2>
+
             
-        </div>
-    </section>
 
-   
-    <section class="portfolio" id="portfolio">
-
-        <h2>MY PHOTOGRAPHY</h2>
-        <p class="section-description">
-            A collection of moments, places, and people captured through my lens.
-        </p>
-
-        <div class="gallery">
-
-            <div class="photo-card">
-                <img src="images/photo-4.jpg"
-                    alt=" Park Landscape"
-                    onclick="openImage(this)">
-                <h3>LANDSCAPE</h3>
-                <p>Exploring the beauty of nature.</p>
+            <div class="skills-list">
+                <div class="skill-item">Photography</div>
+                <div class="skill-item">Photo Editing</div>
+                <div class="skill-item">Web Design</div>
+                <div class="skill-item">Astrophotography</div>
+                <div class="skill-item">Sports Photography</div>
+                <div class="skill-item">Performing Arts Photography</div>
             </div>
 
-            <div class="photo-card">
-                <img src="images/photo-2.jpg"
-                    alt="Marching band image"
-                    onclick="openImage(this)">
-                <h3>Performing Arts Photography</h3>
-                <p>Capturing personality and emotion.</p>
-            </div>
+        </section>
 
-            <div class="photo-card">
-                <img src="images/photo-5.jpg"
-                    alt="Airplane Landing"
-                    onclick="openImage(this)">
-                <h3>Aviation</h3>
-                <p>Capturing Touchdown</p>
-            </div>
+        <!-- About Section -->
+        <section class="about" id="about">
 
-            <div class="photo-card">
-                <img src="images/photo-3.jpg"
-                    alt="Beautiful outdoor landscape"
-                    onclick="openImage(this)">
-                <h3>Astrophotography</h3>
-                <p>Capturing The Night Sky</p>
-            </div>
+            <h2>ABOUT ME</h2>
 
-            <div class="photo-card">
-                <img src="images/photo-9.jpg"
-                    alt="Leaf portrait"
-                    onclick="openImage(this)">
-                <h3>Nature</h3>
-                <p>The Beauty Around Us</p>
-            </div>
+            <p>
+                Welcome to my photography portfolio. I enjoy capturing
+                the world around me and finding unique perspectives
+                through photography. My goal is to tell stories through
+                images and preserve moments that might otherwise be forgotten.
+            </p>
 
-            <div class="photo-card">
-                <img src="images/photo-7.jpg"
-                    alt="soccer photo"
-                    onclick="openImage(this)">
-                <h3>Sports Photography</h3>
-                <p>Capturing Action And Excitement</p>
-            </div>
+        </section>
 
-        </div>
-    </section>
+    </main>
 
-   
-    <section class="about" id="about">
-        <h2>ABOUT ME</h2>
-
-        <p>
-            Welcome to my photography portfolio. I enjoy capturing
-            the world around me and finding unique perspectives
-            through photography. My goal is to tell stories through
-            images and preserve moments that might otherwise be forgotten.
-        </p>
-    </section>
-
-    
-
-    <!-- Footer -->
+    <!-- Footer and Contact Information -->
     <footer>
+
         <section class="contact" id="contact">
-        <h2>LET'S CONNECT</h2>
 
-        <p>
-            Interested in photography or have a project in mind?
-            I would love to hear from you.
-        </p>
+            <h2>LET'S CONNECT</h2>
 
-        <a href="mailto:kmeroney@ttu.edu" class="button">
-            CONTACT ME
-        </a>
-    </section>
+            <p>
+                Interested in photography or have a project in mind?
+                I would love to hear from you.
+            </p>
+
+            <a href="mailto:kmeroney@ttu.edu" class="button">
+                CONTACT ME
+            </a>
+
+        </section>
+
         <p>&copy; 2026 Kyle Meroney</p>
+
     </footer>
 
- <div id="lightbox" onclick="closeImage()">
-    <span class="close">&times;</span>
-    <img id="enlargedImage" src="" alt="Enlarged photograph">
-</div>
-<!-- Lightbox -->
-<div id="lightbox" onclick="closeImage()">
-    <span class="close">&times;</span>
-    <img id="enlargedImage"
-         src=""
-         alt="Enlarged photograph"
-         onclick="event.stopPropagation()">
-</div>
-<script>
-    function openImage(image) {
-        const lightbox = document.getElementById("lightbox");
-        const enlargedImage = document.getElementById("enlargedImage");
+    <!-- Photo Lightbox -->
+    <div id="lightbox" onclick="closeImage()">
 
-        enlargedImage.src = image.src;
-        lightbox.style.display = "flex";
-    }
+        <span class="close">&times;</span>
 
-    function closeImage() {
-        document.getElementById("lightbox").style.display = "none";
-    }
+        <img id="enlargedImage"
+             src=""
+             alt="Enlarged photograph"
+             onclick="event.stopPropagation()">
 
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
-            closeImage();
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+
+        function openImage(image) {
+            const lightbox = document.getElementById("lightbox");
+            const enlargedImage = document.getElementById("enlargedImage");
+
+            enlargedImage.src = image.src;
+            enlargedImage.alt = image.alt;
+
+            lightbox.style.display = "flex";
         }
-    });
-</script>
+
+        function closeImage() {
+            document.getElementById("lightbox").style.display = "none";
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closeImage();
+            }
+        });
+
+    </script>
 
 </body>
 </html>

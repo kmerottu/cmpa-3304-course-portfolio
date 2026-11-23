@@ -297,7 +297,7 @@ footer {
     color: var(--muted-text);
 }
 
-/* Center the skills in an organized layout */
+
 
 .skills-list {
     display: flex;
@@ -310,7 +310,7 @@ footer {
     margin: 0 auto;
 }
 
-/* Individual skill cards */
+
 
 .skill-item {
     display: flex;

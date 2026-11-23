@@ -6,6 +6,10 @@
     --background-color: #f4f6f8;
     --white-color: #ffffff;
     --text-color: #202b38;
+    --muted-text: #687583;
+    --border-color: #d5dce3;
+    --light-blue: #e1e7ed;
+    --dark-blue: #20384f;
 }
 * {
     margin: 0;
@@ -43,16 +47,16 @@ header {
 
 nav a {
     text-decoration: none;
-    color: #303d4b;
+    color: var(--muted-text);
     margin-left: 25px;
     font-size: 14px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: var(--accent-color);
 }
-
 
 .hero {
    min-height: 500px;
@@ -299,7 +303,6 @@ footer {
     color: var(--muted-text);
 }
 
-/* Center the entire skills group */
 
 .skills .skills-list {
     display: flex;
@@ -338,3 +341,10 @@ footer {
     
 }
 
+
+
+.skills .skill-item:hover {
+    transform: translateY(-5px);
+    background-color: var(--light-blue);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}

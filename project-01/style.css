@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #24476b;
+    --secondary-color: #315b82;
+    --accent-color: #7899b8;
+    --silver-color: #c5ced8;
+    --background-color: #f4f6f8;
+    --white-color: #ffffff;
+    --text-color: #202b38;
+}
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +19,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
-    color: #202b38;
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -41,7 +50,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #5683ad;
+    color: var(--accent-color);
 }
 
 
@@ -77,25 +86,25 @@ nav a:hover {
 .button {
     display: inline-block;
     text-decoration: none;
-    color: white;
-    background-color: #315b82;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
     padding: 12px 28px;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--white-color);
     transition: 0.3s;
 }
 
 .button:hover {
-    background-color: #7899b8;
+    background-color: var(--accent-color);
 }
 
 
 .portfolio {
     padding: 75px 8%;
     text-align: center;
-    background-color: #f4f6f8;
+    background-color: var(--background-color);
 }
 
 .portfolio h2,
@@ -112,43 +121,49 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-/* Gallery */
+/* Flexbox Gallery - Grid Appearance */
+
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
 }
 
 .photo-card {
-    background-color: white;
-    padding-bottom: 20px;
-    border: 1px solid #d5dce3;
-    transition: 0.3s;
+    flex: 0 1 calc(33.333% - 25px);
+    max-width: calc(33.333% - 25px);
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .photo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .photo-card img {
+    display: block;
     width: 100%;
     height: 260px;
     object-fit: cover;
-    display: block;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.photo-card img:hover {
+    opacity: 0.85;
 }
 
 .photo-card h3 {
-    margin-top: 18px;
-    color: #315b82;
-    letter-spacing: 2px;
+    color: var(--primary-color);
+    padding: 15px 10px;
+    font-size: 18px;
 }
 
-.photo-card p {
-    color: #687583;
-    font-size: 14px;
-    padding: 0 10px;
-}
 
 /* About Section */
 .about {
@@ -160,7 +175,8 @@ nav a:hover {
 .about p {
     max-width: 750px;
     margin: 0 auto;
-    color: #465361;
+    color: var(--text-color);
+
     font-size: 16px;
 }
 
@@ -171,9 +187,13 @@ nav a:hover {
     background-color: #ffffff;
 }
 
-.contact p {
-    margin-bottom: 25px;
-    color: #687583;
+.portfolio h2,
+.about h2,
+.contact h2 {
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
 }
 
 
@@ -186,40 +206,25 @@ footer {
 }
 
 
+/* Tablet: Two columns */
 @media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav a {
-        margin: 0 8px;
-        font-size: 12px;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
+    .photo-card {
+        flex-basis: calc(50% - 25px);
+        max-width: calc(50% - 25px);
     }
 }
 
+/* Mobile: One column */
 @media (max-width: 480px) {
-
     .gallery {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero-content h1 {
-        font-size: 26px;
-    }
-
-    .portfolio,
-    .about {
-        padding: 50px 6%;
+    .photo-card {
+        flex-basis: 100%;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
@@ -269,3 +274,63 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* ==============================
+   SKILLS AND INTERESTS SECTION
+================================= */
+
+.skills {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: var(--white-color);
+}
+
+.skills h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.skills > p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--muted-text);
+}
+
+/* Center the skills in an organized layout */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Individual skill cards */
+
+.skill-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 1 220px;
+    max-width: 260px;
+    min-height: 85px;
+
+    padding: 20px;
+    text-align: center;
+
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    color: var(--primary-color);
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+

@@ -275,54 +275,58 @@ footer {
     cursor: pointer;
 }
 
-/* ==============================
-   SKILLS AND INTERESTS SECTION
-================================= */
+
+/* SKILLS AND INTERESTS SECTION */
 
 .skills {
-    padding: 60px 8%;
+    width: 100%;
+    padding: 60px 20px;
     text-align: center;
     background-color: var(--white-color);
 }
 
 .skills h2 {
+    text-align: center;
     color: var(--primary-color);
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 .skills > p {
+    text-align: center;
     max-width: 650px;
     margin: 0 auto 30px;
     color: var(--muted-text);
 }
 
+/* Center the entire skills group */
 
-
-.skills-list {
+.skills .skills-list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     gap: 20px;
 
+    width: 100%;
     max-width: 900px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Individual skill cards */
 
+.skills .skill-item {
+    flex: 0 1 250px;
+    min-height: 85px;
 
-.skill-item {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    flex: 1 1 220px;
-    max-width: 260px;
-    min-height: 85px;
-
-    padding: 20px;
     text-align: center;
+    padding: 20px;
 
     background-color: var(--background-color);
     border: 1px solid var(--border-color);
@@ -331,6 +335,6 @@ footer {
     color: var(--primary-color);
     font-weight: bold;
 
-    transition: all 0.3s ease;
+    
 }
 
